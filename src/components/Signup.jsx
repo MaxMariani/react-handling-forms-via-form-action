@@ -1,6 +1,17 @@
 export default function Signup() {
+  function signupAction(formData) {
+    const enteredEmail = formData.get("email"); // ref to input names
+    const password = formData.get("password");
+    const confirmPassword = formData.get("password");
+    const firstName = formData.get("first-name");
+    const lastName = formData.get("last-name");
+    const role = formData.get("role");
+    const terms = formData.get("terms");
+    const acquisitionChannel = formData.getAll('acquisition');
+  }
+
   return (
-    <form>
+    <form action={signupAction}>
       <h2>Welcome on board!</h2>
       <p>We just need a little bit of data from you to get you started 🚀</p>
 
